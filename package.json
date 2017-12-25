@@ -1,0 +1,9 @@
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "description": "Sudoku web app build in React",
+  "main": "index.js",
+  "repository": "git@github.com:nevantan/sudoku.git",
+  "author": "Nevan Tan <nevan@tanclan.ca>",
+  "license": "MIT"
+}
