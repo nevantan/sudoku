@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Cage component correctly 1`] = `
+<div>
+  <p>
+    Cage Component
+  </p>
+  <Cell />
+  <Cell />
+  <Cell />
+  <Cell />
+  <Cell />
+  <Cell />
+  <Cell />
+  <Cell />
+  <Cell />
+</div>
+`;

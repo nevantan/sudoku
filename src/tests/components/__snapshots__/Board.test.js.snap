@@ -1,7 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Board component correctly 1`] = `
-<p>
-  Board Component
-</p>
+<div>
+  <p>
+    Board Component
+  </p>
+  <Cage />
+  <Cage />
+  <Cage />
+  <Cage />
+  <Cage />
+  <Cage />
+  <Cage />
+  <Cage />
+  <Cage />
+</div>
 `;
