@@ -220,7 +220,7 @@ const fullValidBoard = [
   ]
 ];
 
-// Contains 2 column errors, 2 row errors, and 2 box errors
+// Contains 2 column errors, 2 row errors, and 2 cage errors
 const fullInvalidBoard = [
   [
     // Row 1
