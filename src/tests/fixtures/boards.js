@@ -224,7 +224,7 @@ const partialInvalidBoard = [
     [
         // Row 1
         { value: 0, valid: false },
-        { value: 0, valid: false },
+        { value: 5, valid: false },
         { value: 0, valid: false },
         { value: 1, valid: false },
         { value: 0, valid: false },
