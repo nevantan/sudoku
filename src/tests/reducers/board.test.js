@@ -5,6 +5,14 @@ import {
   partialInvalidBoard
 } from '../fixtures/boards.js';
 
+test('should return default state on unhandled action', () => {
+  const action = {
+    type: 'FOO'
+  };
+  const state = boardReducer(undefined, action);
+  expect(state).toEqual({ board: emptyBoard });
+});
+
 test('should update value of cell', () => {
   const action = {
     type: 'UPDATE_CELL',
