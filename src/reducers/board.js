@@ -3,7 +3,7 @@ import validateColumn from '../validators/column.js';
 import validateCage from '../validators/cage.js';
 import { emptyBoard } from '../tests/fixtures/boards.js';
 
-const defaultState = { board: emptyBoard };
+const defaultState = emptyBoard;
 
 export default (state = defaultState, action) => {
   switch (action.type) {

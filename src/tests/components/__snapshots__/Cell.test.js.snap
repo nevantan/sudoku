@@ -2,6 +2,6 @@
 
 exports[`should render Cell component correctly 1`] = `
 <div>
-  Cell Component
+  <div />
 </div>
 `;

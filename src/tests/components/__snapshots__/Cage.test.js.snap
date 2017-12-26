@@ -5,14 +5,41 @@ exports[`should render Cage component correctly 1`] = `
   <p>
     Cage Component
   </p>
-  <Cell />
-  <Cell />
-  <Cell />
-  <Cell />
-  <Cell />
-  <Cell />
-  <Cell />
-  <Cell />
-  <Cell />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
+  <Connect(Cell)
+    column={NaN}
+    row={NaN}
+  />
 </div>
 `;
