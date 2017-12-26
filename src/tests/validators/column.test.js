@@ -17,17 +17,17 @@ test('should return true when the column contains no duplicates (excluding 0)', 
   expect(result).toBe(true);
 });
 
-test('should return true when a full row contains no duplicates', () => {
+test('should return true when a full column contains no duplicates', () => {
   const result = columnValidator(fullValidBoard, 3);
   expect(result).toBe(true);
 });
 
-test('should return false when a row contains duplicates (excluding 0)', () => {
+test('should return false when a column contains duplicates (excluding 0)', () => {
   const result = columnValidator(partialInvalidBoard, 0);
   expect(result).toBe(false);
 });
 
-test('should return false when a full row contains duplicates', () => {
+test('should return false when a full column contains duplicates', () => {
   const result = columnValidator(fullInvalidBoard, 0);
   expect(result).toBe(false);
 });
