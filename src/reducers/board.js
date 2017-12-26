@@ -1,5 +1,6 @@
 import validateRow from '../validators/row.js';
 import validateColumn from '../validators/column.js';
+import validateCage from '../validators/cage.js';
 
 export default (state, action) => {
   const newBoard = state.board.map((row, y) => {
@@ -17,7 +18,8 @@ export default (state, action) => {
   const board = newBoard.map((row, y) => {
     return row.map((cell, x) => {
       const colValid = validateColumn(newBoard, x);
-      return { value: cell.value, valid: rowValid && colValid };
+      const cageValid = validateCage(newBoard, coordToCage(y, x));
+      return { value: cell.value, valid: rowValid && colValid && cageValid };
     });
   });
 
@@ -25,3 +27,9 @@ export default (state, action) => {
     board
   };
 };
+
+const coordToCage = (row, col) => {
+  return Math.floor(row / 3) * 3 + Math.floor(col / 3);
+};
+
+export { coordToCage };
