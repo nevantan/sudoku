@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Cell component correctly 1`] = `
-<div>
-  <div />
-</div>
+<input
+  className=""
+  id="c00"
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  type="text"
+  value={1}
+/>
+`;
+
+exports[`should render error Cell component correctly 1`] = `
+<input
+  className="error"
+  id="c00"
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  type="text"
+  value={1}
+/>
 `;

@@ -8,10 +8,10 @@ const defaultState = emptyBoard;
 export default (state = defaultState, action) => {
   switch (action.type) {
     case 'UPDATE_CELL':
-      const newBoard = state.board.map((row, y) => {
+      const newBoard = state.map((row, y) => {
         if (y == action.row) {
           return row.map((cell, x) => {
-            if (x == action.col) return { value: action.value, valid: true };
+            if (x == action.column) return { value: action.value, valid: true };
             return cell;
           });
         }
@@ -31,10 +31,7 @@ export default (state = defaultState, action) => {
         });
       });
 
-      return {
-        ...state,
-        board
-      };
+      return board;
     default:
       return state;
   }
