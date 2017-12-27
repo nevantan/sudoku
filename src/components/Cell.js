@@ -39,7 +39,7 @@ export class Cell extends React.Component {
         id={'c' + this.props.id}
         className={this.props.valid ? 'cell' : 'cell error'}
         type="text"
-        value={this.props.value}
+        value={this.props.value ? this.props.value : ''}
         onChange={this.handleChange}
         onKeyDown={this.handleKeyDown}
       />
