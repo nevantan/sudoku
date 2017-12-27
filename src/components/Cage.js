@@ -14,15 +14,47 @@ class Cage extends React.Component {
     return (
       <div>
         <p>Cage Component</p>
-        <Cell row={this.row} column={this.col} />
-        <Cell row={this.row} column={this.col + 1} />
-        <Cell row={this.row} column={this.col + 2} />
-        <Cell row={this.row + 1} column={this.col} />
-        <Cell row={this.row + 1} column={this.col + 1} />
-        <Cell row={this.row + 1} column={this.col + 2} />
-        <Cell row={this.row + 2} column={this.col} />
-        <Cell row={this.row + 2} column={this.col + 1} />
-        <Cell row={this.row + 2} column={this.col + 2} />
+        <Cell id={'' + this.row + this.col} row={this.row} column={this.col} />
+        <Cell
+          id={'' + this.row + (this.col + 1)}
+          row={this.row}
+          column={this.col + 1}
+        />
+        <Cell
+          id={'' + this.row + (this.col + 2)}
+          row={this.row}
+          column={this.col + 2}
+        />
+        <Cell
+          id={'' + (this.row + 1) + this.col}
+          row={this.row + 1}
+          column={this.col}
+        />
+        <Cell
+          id={'' + (this.row + 1) + (this.col + 1)}
+          row={this.row + 1}
+          column={this.col + 1}
+        />
+        <Cell
+          id={'' + (this.row + 1) + (this.col + 2)}
+          row={this.row + 1}
+          column={this.col + 2}
+        />
+        <Cell
+          id={'' + (this.row + 2) + this.col}
+          row={this.row + 2}
+          column={this.col}
+        />
+        <Cell
+          id={'' + (this.row + 2) + (this.col + 1)}
+          row={this.row + 2}
+          column={this.col + 1}
+        />
+        <Cell
+          id={'' + (this.row + 2) + (this.col + 2)}
+          row={this.row + 2}
+          column={this.col + 2}
+        />
       </div>
     );
   }
