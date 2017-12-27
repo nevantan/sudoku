@@ -7,9 +7,14 @@ export class Cell extends React.Component {
   }
   render() {
     return (
-      <div>
-        <div>{this.props.value}</div>
-      </div>
+      <input
+        id={'c' + this.props.id}
+        className={this.props.valid ? 'cell' : 'cell error'}
+        type="text"
+        value={this.props.value}
+        onChange={this.handleChange}
+        onKeyDown={this.handleKeyDown}
+      />
     );
   }
 }
