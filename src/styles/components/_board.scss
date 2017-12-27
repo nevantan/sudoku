@@ -1,0 +1,8 @@
+.board {
+  display: inline-block;
+  border: 1px solid $dark-grey;
+}
+
+.board__row {
+  display: flex;
+}
