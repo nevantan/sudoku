@@ -17,22 +17,22 @@ test('should update value of cell', () => {
   const action = {
     type: 'UPDATE_CELL',
     row: 0,
-    col: 0,
+    column: 0,
     value: 5
   };
-  const state = boardReducer({ board: emptyBoard }, action);
-  expect(state.board[0][0]).toEqual({ value: 5, valid: true });
+  const state = boardReducer(emptyBoard, action);
+  expect(state[0][0]).toEqual({ value: 5, valid: true });
 });
 
 test('should properly mark row as invalid', () => {
   const action = {
     type: 'UPDATE_CELL',
     row: 0,
-    col: 0,
+    column: 0,
     value: 3
   };
-  const state = boardReducer({ board: partialValidBoard }, action);
-  state.board[0].forEach(cell => {
+  const state = boardReducer(partialValidBoard, action);
+  state[0].forEach(cell => {
     expect(cell).toEqual({ value: expect.any(Number), valid: false });
   });
 });
@@ -41,11 +41,11 @@ test('should properly mark column as invalid', () => {
   const action = {
     type: 'UPDATE_CELL',
     row: 0,
-    col: 0,
+    column: 0,
     value: 6
   };
-  const state = boardReducer({ board: partialValidBoard }, action);
-  state.board.forEach(row => {
+  const state = boardReducer(partialValidBoard, action);
+  state.forEach(row => {
     expect(row[0]).toEqual({ value: expect.any(Number), valid: false });
   });
 });
@@ -65,43 +65,43 @@ test('should properly mark cage as invalid', () => {
   const action = {
     type: 'UPDATE_CELL',
     row: 0,
-    col: 1,
+    column: 1,
     value: 5
   };
-  const state = boardReducer({ board: partialValidBoard }, action);
-  expect(state.board[0][0]).toEqual({
+  const state = boardReducer(partialValidBoard, action);
+  expect(state[0][0]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[0][1]).toEqual({
+  expect(state[0][1]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[0][2]).toEqual({
+  expect(state[0][2]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[1][0]).toEqual({
+  expect(state[1][0]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[1][1]).toEqual({
+  expect(state[1][1]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[1][2]).toEqual({
+  expect(state[1][2]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[2][0]).toEqual({
+  expect(state[2][0]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[2][1]).toEqual({
+  expect(state[2][1]).toEqual({
     value: expect.any(Number),
     valid: false
   });
-  expect(state.board[2][2]).toEqual({
+  expect(state[2][2]).toEqual({
     value: expect.any(Number),
     valid: false
   });
