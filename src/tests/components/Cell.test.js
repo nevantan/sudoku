@@ -115,7 +115,7 @@ test('should ignore other keydown events', () => {
 test('should correctly update cell value on number keypress', () => {
   const value = '6';
   center.simulate('change', { target: { value } });
-  expect(_updateCell).toHaveBeenLastCalledWith(1, 1, '6');
+  expect(_updateCell).toHaveBeenLastCalledWith(1, 1, 6);
 });
 
 test('should not update cell value on non-numeric keypress', () => {
