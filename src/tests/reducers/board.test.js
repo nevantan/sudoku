@@ -10,7 +10,7 @@ test('should return default state on unhandled action', () => {
     type: 'FOO'
   };
   const state = boardReducer(undefined, action);
-  expect(state).toEqual(emptyBoard);
+  expect(state).toEqual(partialValidBoard);
 });
 
 test('should update value of cell', () => {
