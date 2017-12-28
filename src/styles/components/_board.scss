@@ -1,6 +1,8 @@
 .board {
   display: inline-block;
-  border: 1px solid $dark-grey;
+  border: 3px solid $dark-grey;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .board__row {
