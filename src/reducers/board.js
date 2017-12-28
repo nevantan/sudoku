@@ -8,6 +8,7 @@ const defaultState = emptyBoard;
 export default (state = defaultState, action) => {
   switch (action.type) {
     case 'UPDATE_CELL':
+      // Make change to the board
       const newBoard = state.map((row, y) => {
         if (y == action.row) {
           return row.map((cell, x) => {
@@ -18,9 +19,9 @@ export default (state = defaultState, action) => {
         return row;
       });
 
-      const rowValid = validateRow(newBoard, action.row);
-
+      // Validate new board state
       const board = newBoard.map((row, y) => {
+        const rowValid = validateRow(newBoard, y);
         return row.map((cell, x) => {
           const colValid = validateColumn(newBoard, x);
           const cageValid = validateCage(newBoard, coordToCage(y, x));
