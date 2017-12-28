@@ -37,6 +37,17 @@ test('should properly mark row as invalid', () => {
   });
 });
 
+test('should not improperly mark row as invalid', () => {
+  const action = {
+    type: 'UPDATE_CELL',
+    row: 0,
+    column: 0,
+    value: 3
+  };
+  const state = boardReducer(partialValidBoard, action);
+  expect(state[1][0]).toEqual({ value: expect.any(Number), valid: true });
+});
+
 test('should properly mark column as invalid', () => {
   const action = {
     type: 'UPDATE_CELL',
@@ -48,6 +59,17 @@ test('should properly mark column as invalid', () => {
   state.forEach(row => {
     expect(row[0]).toEqual({ value: expect.any(Number), valid: false });
   });
+});
+
+test('should not improperly mark column as invalid', () => {
+  const action = {
+    type: 'UPDATE_CELL',
+    row: 0,
+    column: 0,
+    value: 6
+  };
+  const state = boardReducer(partialValidBoard, action);
+  expect(state[0][1]).toEqual({ value: expect.any(Number), valid: true });
 });
 
 test('should return proper cage for provided coords', () => {
@@ -104,5 +126,19 @@ test('should properly mark cage as invalid', () => {
   expect(state[2][2]).toEqual({
     value: expect.any(Number),
     valid: false
+  });
+});
+
+test('should not improperly mark cage as invalid', () => {
+  const action = {
+    type: 'UPDATE_CELL',
+    row: 0,
+    column: 1,
+    value: 5
+  };
+  const state = boardReducer(partialValidBoard, action);
+  expect(state[3][0]).toEqual({
+    value: expect.any(Number),
+    valid: true
   });
 });
