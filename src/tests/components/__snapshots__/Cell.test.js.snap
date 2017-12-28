@@ -4,6 +4,7 @@ exports[`should render Cell component correctly 1`] = `
 <input
   className="cell fixed"
   id="c00"
+  onFocus={[Function]}
   onKeyDown={[Function]}
   readOnly={true}
   type="text"
@@ -11,10 +12,23 @@ exports[`should render Cell component correctly 1`] = `
 />
 `;
 
+exports[`should render Cell component with active value correctly 1`] = `
+<input
+  className="cell fixed highlight"
+  id="c00"
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  readOnly={true}
+  type="text"
+  value={2}
+/>
+`;
+
 exports[`should render Cell component with preset value correctly 1`] = `
 <input
   className="cell fixed"
   id="c00"
+  onFocus={[Function]}
   onKeyDown={[Function]}
   readOnly={true}
   type="text"
@@ -27,6 +41,7 @@ exports[`should render Cell component with value 0 correctly 1`] = `
   className="cell"
   id="c00"
   onChange={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   readOnly={false}
   type="text"
@@ -38,6 +53,7 @@ exports[`should render error Cell component correctly 1`] = `
 <input
   className="cell error fixed"
   id="c00"
+  onFocus={[Function]}
   onKeyDown={[Function]}
   readOnly={true}
   type="text"
