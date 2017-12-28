@@ -4,10 +4,21 @@ exports[`should render Cell component correctly 1`] = `
 <input
   className="cell"
   id="c00"
-  onChange={[Function]}
   onKeyDown={[Function]}
+  readOnly={true}
   type="text"
   value={1}
+/>
+`;
+
+exports[`should render Cell component with preset value correctly 1`] = `
+<input
+  className="cell"
+  id="c00"
+  onKeyDown={[Function]}
+  readOnly={true}
+  type="text"
+  value={2}
 />
 `;
 
@@ -17,6 +28,7 @@ exports[`should render Cell component with value 0 correctly 1`] = `
   id="c00"
   onChange={[Function]}
   onKeyDown={[Function]}
+  readOnly={false}
   type="text"
   value=""
 />
@@ -26,8 +38,8 @@ exports[`should render error Cell component correctly 1`] = `
 <input
   className="cell error"
   id="c00"
-  onChange={[Function]}
   onKeyDown={[Function]}
+  readOnly={true}
   type="text"
   value={1}
 />

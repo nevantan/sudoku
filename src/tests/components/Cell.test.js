@@ -11,21 +11,28 @@ let focus, wrapper, center, _updateCell;
 
 test('should render Cell component correctly', () => {
   const wrapper = shallow(
-    <Cell id="00" row={0} column={0} value={1} valid={true} />
+    <Cell id="00" row={0} column={0} value={1} valid={true} fixed={true} />
   );
   expect(wrapper).toMatchSnapshot();
 });
 
 test('should render error Cell component correctly', () => {
   const wrapper = shallow(
-    <Cell id="00" row={0} column={0} value={1} valid={false} />
+    <Cell id="00" row={0} column={0} value={1} valid={false} fixed={true} />
   );
   expect(wrapper).toMatchSnapshot();
 });
 
 test('should render Cell component with value 0 correctly', () => {
   const wrapper = shallow(
-    <Cell id="00" row={0} column={0} value={0} valid={true} />
+    <Cell id="00" row={0} column={0} value={0} valid={true} fixed={false} />
+  );
+  expect(wrapper).toMatchSnapshot();
+});
+
+test('should render Cell component with preset value correctly', () => {
+  const wrapper = shallow(
+    <Cell id="00" row={0} column={0} value={2} valid={true} fixed={true} />
   );
   expect(wrapper).toMatchSnapshot();
 });

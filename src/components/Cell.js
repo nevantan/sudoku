@@ -13,7 +13,7 @@ export class Cell extends React.Component {
     }
   };
   handleKeyDown = e => {
-    if (e.key == 'Backspace') {
+    if (e.key == 'Backspace' && !this.props.fixed) {
       this.props.updateCell(this.props.row, this.props.column, 0);
     } else if (e.key == 'ArrowRight' && this.props.column < 8) {
       document
@@ -40,8 +40,9 @@ export class Cell extends React.Component {
         className={this.props.valid ? 'cell' : 'cell error'}
         type="text"
         value={this.props.value ? this.props.value : ''}
-        onChange={this.handleChange}
+        onChange={!this.props.fixed ? this.handleChange : undefined}
         onKeyDown={this.handleKeyDown}
+        readOnly={this.props.fixed}
       />
     );
   }
@@ -51,7 +52,8 @@ const mapStateToProps = (state, { row, column }) => {
   const cell = state.board[row][column];
   return {
     value: cell.value,
-    valid: cell.valid
+    valid: cell.valid,
+    fixed: cell.fixed
   };
 };
 

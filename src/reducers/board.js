@@ -12,7 +12,8 @@ export default (state = defaultState, action) => {
       const newBoard = state.map((row, y) => {
         if (y == action.row) {
           return row.map((cell, x) => {
-            if (x == action.column) return { value: action.value, valid: true };
+            if (x == action.column)
+              return { value: action.value, valid: true, fixed: action.fixed };
             return cell;
           });
         }
@@ -27,7 +28,8 @@ export default (state = defaultState, action) => {
           const cageValid = validateCage(newBoard, coordToCage(y, x));
           return {
             value: cell.value,
-            valid: rowValid && colValid && cageValid
+            valid: rowValid && colValid && cageValid,
+            fixed: cell.fixed
           };
         });
       });
