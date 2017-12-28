@@ -9,7 +9,7 @@ export class Cell extends React.Component {
   handleChange = e => {
     const value = e.target.value.replace(this.props.value, '');
     if (value.match(/[0-9]/)) {
-      this.props.updateCell(this.props.row, this.props.column, value);
+      this.props.updateCell(this.props.row, this.props.column, parseInt(value));
     }
   };
   handleKeyDown = e => {
@@ -34,10 +34,14 @@ export class Cell extends React.Component {
     }
   };
   render() {
+    let classes = 'cell';
+    if (!this.props.valid) classes += ' error';
+    if (this.props.fixed) classes += ' fixed';
+
     return (
       <input
         id={'c' + this.props.id}
-        className={this.props.valid ? 'cell' : 'cell error'}
+        className={classes}
         type="text"
         value={this.props.value ? this.props.value : ''}
         onChange={!this.props.fixed ? this.handleChange : undefined}

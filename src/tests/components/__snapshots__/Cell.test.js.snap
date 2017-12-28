@@ -2,7 +2,7 @@
 
 exports[`should render Cell component correctly 1`] = `
 <input
-  className="cell"
+  className="cell fixed"
   id="c00"
   onKeyDown={[Function]}
   readOnly={true}
@@ -13,7 +13,7 @@ exports[`should render Cell component correctly 1`] = `
 
 exports[`should render Cell component with preset value correctly 1`] = `
 <input
-  className="cell"
+  className="cell fixed"
   id="c00"
   onKeyDown={[Function]}
   readOnly={true}
@@ -36,7 +36,7 @@ exports[`should render Cell component with value 0 correctly 1`] = `
 
 exports[`should render error Cell component correctly 1`] = `
 <input
-  className="cell error"
+  className="cell error fixed"
   id="c00"
   onKeyDown={[Function]}
   readOnly={true}
