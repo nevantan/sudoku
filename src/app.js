@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import Board from './components/Board';
+import Layout from './components/Layout';
 import configureStore from './store/configureStore.js';
 import './styles/style.scss';
 
 const store = configureStore();
 const jsx = (
   <Provider store={store}>
-    <Board />
+    <Layout />
   </Provider>
 );
 

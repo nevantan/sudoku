@@ -1,6 +1,7 @@
 import boardReducer, { coordToCage } from '../../reducers/board.js';
 import {
   emptyBoard,
+  hardPartialValidBoard,
   partialValidBoard,
   partialInvalidBoard
 } from '../fixtures/boards.js';
@@ -10,7 +11,7 @@ test('should return default state on unhandled action', () => {
     type: 'FOO'
   };
   const state = boardReducer(undefined, action);
-  expect(state).toEqual(partialValidBoard);
+  expect(state).toEqual(hardPartialValidBoard);
 });
 
 test('should update value of cell', () => {
