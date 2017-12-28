@@ -1,6 +1,6 @@
 import { updateCell } from '../../actions/board.js';
 
-test('should correctly generation UpdateCell action object', () => {
+test('should correctly generate UpdateCell action object', () => {
   const row = 0;
   const column = 0;
   const value = 1;
