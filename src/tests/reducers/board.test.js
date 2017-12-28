@@ -11,7 +11,15 @@ test('should return default state on unhandled action', () => {
     type: 'FOO'
   };
   const state = boardReducer(undefined, action);
-  expect(state).toEqual(hardPartialValidBoard);
+  expect(state).toEqual(expect.any(Array));
+});
+
+test('should initialize with a random puzzle', () => {
+  const action = {
+    type: '@@INIT'
+  };
+  const state = boardReducer(undefined, action);
+  expect(state).toEqual(expect.any(Array));
 });
 
 test('should update value of cell', () => {
