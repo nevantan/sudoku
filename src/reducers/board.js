@@ -1,9 +1,9 @@
 import validateRow from '../validators/row.js';
 import validateColumn from '../validators/column.js';
 import validateCage from '../validators/cage.js';
-import { emptyBoard } from '../tests/fixtures/boards.js';
+import { emptyBoard, partialValidBoard } from '../tests/fixtures/boards.js';
 
-const defaultState = emptyBoard;
+const defaultState = partialValidBoard;
 
 export default (state = defaultState, action) => {
   switch (action.type) {
