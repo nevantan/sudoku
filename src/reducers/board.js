@@ -6,8 +6,9 @@ import {
   partialValidBoard,
   hardPartialValidBoard
 } from '../tests/fixtures/boards.js';
+import { getPuzzle } from '../generator/generator';
 
-const defaultState = hardPartialValidBoard;
+const defaultState = [];
 
 export default (state = defaultState, action) => {
   switch (action.type) {
@@ -39,6 +40,8 @@ export default (state = defaultState, action) => {
       });
 
       return board;
+    case '@@INIT':
+      return getPuzzle();
     default:
       return state;
   }

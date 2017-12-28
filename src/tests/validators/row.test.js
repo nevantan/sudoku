@@ -28,6 +28,6 @@ test('should return false when a row contains duplicates (excluding 0)', () => {
 });
 
 test('should return false when a full row contains duplicates', () => {
-  const result = rowValidator(fullInvalidBoard, 3);
+  const result = rowValidator(fullInvalidBoard, 2);
   expect(result).toBe(false);
 });
