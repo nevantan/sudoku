@@ -11,6 +11,17 @@ exports[`should render Cell component correctly 1`] = `
 />
 `;
 
+exports[`should render Cell component with value 0 correctly 1`] = `
+<input
+  className="cell"
+  id="c00"
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  type="text"
+  value=""
+/>
+`;
+
 exports[`should render error Cell component correctly 1`] = `
 <input
   className="cell error"

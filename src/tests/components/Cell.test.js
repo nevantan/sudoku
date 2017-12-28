@@ -23,6 +23,13 @@ test('should render error Cell component correctly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+test('should render Cell component with value 0 correctly', () => {
+  const wrapper = shallow(
+    <Cell id="00" row={0} column={0} value={0} valid={true} />
+  );
+  expect(wrapper).toMatchSnapshot();
+});
+
 test('should correctly map state to props', () => {
   const state = {
     board: [[{ value: 0, valid: true }]]
